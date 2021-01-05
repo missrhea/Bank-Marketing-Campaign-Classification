@@ -60,16 +60,16 @@ The average misclassifcation error rate over the 5 Cross Validation folds for di
 | Naive Bayes |0 |0 |
 
 This is the box plots of the misclassification errors from 5 folds of Cross Validation for thr four models.
-![boxplot of all models](/images/boxplot of all models.png)
+![boxplot of all models](./images/boxplot of all models.png)
 
 To generate the box plots of relative misclassification errors, for each fold I divide the misclassification error of each model by the minimum misclassification error in the same fold. This makes it simple to interpret how much worse / off models are relative to the best one.
-![relative boxplot of all models](/images/relative boxplot of all models.png)
+![relative boxplot of all models](./images/relative boxplot of all models.png)
 
 For this problem it is helpful to take a look at the confusion matrix for two reason,
 1. The data set is highly imbalanced (only ~12% positive samples).
 2. A marketing team has limited resources and would like to minimize the number of clients they reach out to, i.e. minimize reaching out to clients who will not subscribe to a term deposit. This corresponds to minimizing the False Positives. 
 
-![confusion matrix all](/images/confusion matrix all.png)
+![confusion matrix all](./images/confusion matrix all.png)
 
 ### Final Model Training
 - Finally select the model with the lowest mean misclassification error across the 5 outer validation set folds.
@@ -79,11 +79,11 @@ For this problem it is helpful to take a look at the confusion matrix for two re
 
 These are the box plots made using misclassification errors from the fold of Cross Validation done during Tuning with different hyperparameter settings.
 
-![nn hyperparameters boxplot](images/nn hyperparameters boxplot.png)
+![nn hyperparameters boxplot](./images/nn hyperparameters boxplot.png)
 
 Here is the box plot using relative misclassification errors.
 
-![relative nn hyperparameters boxplot](images/relative nn hyperparameters boxplot.png)
+![relative nn hyperparameters boxplot](./images/relative nn hyperparameters boxplot.png)
 
 ### Evaluating the Model on the Test Set
 ##### Optimal Hyperparameters
@@ -114,7 +114,7 @@ Precision = TP/(TP+FP)
 Using precision in this context is useful since it provides an idea of the cost incurred due to the False Positives.
 
 This is the confusion matrix of the predictions on the test set.
-![NN Test set confusion matrix](images/NN Test set confusion matrix.png)
+![NN Test set confusion matrix](./images/NN Test set confusion matrix.png)
 
 Here we see that the Neural Network model is not at all useful. It deceptively achieves a low misclassification error rate by predicting "no" for every test set instance. This is not any better than guessing. 
 
@@ -122,16 +122,16 @@ Here we see that the Neural Network model is not at all useful. It deceptively a
 ### Motivation
 To address the bias in the Neural Network model, I look at the confusion matrix for different models from the 5 fold cross validation done during the model selection phase.
 
-![confusion matrix all](/images/confusion matrix all.png)
+![confusion matrix all](./images/confusion matrix all.png)
 
 Keeping in mind the trade off between the bias and variance among the models, I decide to pivot to using the Random Forest model.
 
 ### Final Model Training
 This is the box plot of misclassification errors from the cross validation using different values for mtry & nodesize hyperparameters.
-![RF relative boxplot](images/RF relative boxplot.png)
+![RF relative boxplot](./images/RF relative boxplot.png)
 
 I decided to fine tune the hyperparameters using a finer grid.
-![RF relative boxplot Fine Tuned](images/RF relative boxplot Fine Tuned.png)
+![RF relative boxplot Fine Tuned](./images/RF relative boxplot Fine Tuned.png)
 
 ### Evaluating the Model on the Test Set
 ##### Optimal Hyperparameters
@@ -149,10 +149,10 @@ I decided to fine tune the hyperparameters using a finer grid.
 
 ## Suggestions to the Marketing Team
 1. By personalized marketing to a percentage of clients ranked by the model you can convert more clients than if you would have reached out to them randomly.
-![cph chart](images/cph chart.png)
+![cph chart](./images/cph chart.png)
 
 2. Consult with experts in economics since the XYZ social-economic explanatory variables greatly influences the outcome.
-![RF var importance plot](images/RF var importance plot.png)
+![RF var importance plot](./images/RF var importance plot.png)
 
 
 

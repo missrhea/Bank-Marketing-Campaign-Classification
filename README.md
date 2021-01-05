@@ -60,7 +60,7 @@ The average misclassifcation error rate over the 5 Cross Validation folds for di
 | Naive Bayes |0 |0 |
 
 This is the box plots of the misclassification errors from 5 folds of Cross Validation for thr four models.
-![boxplot of all models](./images/boxplot of all models.png)
+![boxplot of all models](https://github.com/missrhea/Bank-Marketing-Campaign-Classification/blob/main/images/boxplot%20of%20all%20models.png)
 
 To generate the box plots of relative misclassification errors, for each fold I divide the misclassification error of each model by the minimum misclassification error in the same fold. This makes it simple to interpret how much worse / off models are relative to the best one.
 ![relative boxplot of all models](./images/relative boxplot of all models.png)

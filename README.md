@@ -52,12 +52,12 @@ To compare different model families and select the optimal hyperparameters I use
 
 The average misclassifcation error rate over the 5 Cross Validation folds for different models,
 
-| Model | Test Set Error % |Accuracy % |
+| Model | Validation Set Error % |Accuracy % |
 | ------ | ------| ------ |
-| Logistic Regression|0 |0|
+| Logistic Regression|0.1135863 |0.8864137|
 | Neural Network |0.128306 |0.871694|
-| Random Forest |0 |0 |
-| Naive Bayes |0 |0 |
+| Random Forest |0.1160266 |0.8839734|
+| Naive Bayes |0.1184274 |0.8815726 |
 
 This is the box plots of the misclassification errors from 5 folds of Cross Validation for thr four models.
 ![boxplot of all models](https://github.com/missrhea/Bank-Marketing-Campaign-Classification/blob/main/images/boxplot%20of%20all%20models.png)
